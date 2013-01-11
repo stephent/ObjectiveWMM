@@ -53,6 +53,25 @@ In addition, a small number of test cases have been added, with test results tak
 
 Finally, tests are included to validate model boundary dates. WMM 2010 is intended for use with dates falling in the years 2010-2015 only.
 
+## Modifications to WMM source
+
+Only two minor changes have been made to the WMM source code included with this project. In the file GeomagnetismHeader.h, 
+
+	#define TRUE            ((int)1)
+	#define FALSE           ((int)0)
+
+was changed to:
+
+	#ifndef TRUE
+	#define TRUE            ((int)1)
+	#endif
+
+	#ifndef FALSE
+	#define FALSE           ((int)0)
+	#endif
+
+in order to avoid compiler warnings about redefining TRUE and FALSE.
+
 ## Credits
 
 The World Magnetic Model is a joint product of the United States’ National Geospatial-Intelligence Agency (NGA) and the United Kingdom’s Defence Geographic Centre (DGC). The WMM was developed jointly by the National Geophysical Data Center (NGDC, Boulder CO, USA) and the British Geological Survey (BGS, Edinburgh, Scotland).
