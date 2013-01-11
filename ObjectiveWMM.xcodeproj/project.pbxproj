@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC712F66169FD16C00D10872 /* CCMagneticDeclination.m in Sources */ = {isa = PBXBuildFile; fileRef = DC712F65169FD16C00D10872 /* CCMagneticDeclination.m */; };
+		DC712F67169FD16C00D10872 /* CCMagneticDeclination.m in Sources */ = {isa = PBXBuildFile; fileRef = DC712F65169FD16C00D10872 /* CCMagneticDeclination.m */; };
 		DC846C2B169F66C10074A10B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2A169F66C10074A10B /* UIKit.framework */; };
 		DC846C2D169F66C10074A10B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2C169F66C10074A10B /* Foundation.framework */; };
 		DC846C2F169F66C10074A10B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2E169F66C10074A10B /* CoreGraphics.framework */; };
@@ -18,9 +20,32 @@
 		DC846C41169F66C10074A10B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC846C40169F66C10074A10B /* Default-568h@2x.png */; };
 		DC846C44169F66C10074A10B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC846C42169F66C10074A10B /* MainStoryboard.storyboard */; };
 		DC846C47169F66C10074A10B /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C46169F66C10074A10B /* CCViewController.m */; };
+		DC846C52169F671B0074A10B /* GeomagnetismLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = DC846C50169F671B0074A10B /* GeomagnetismLibrary.c */; };
+		DC846C53169F671B0074A10B /* WMM.COF in Resources */ = {isa = PBXBuildFile; fileRef = DC846C51169F671B0074A10B /* WMM.COF */; };
+		DC846C57169F6E420074A10B /* CCMagneticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C56169F6E420074A10B /* CCMagneticModel.m */; };
+		DC846C84169F77250074A10B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C83169F77250074A10B /* CoreLocation.framework */; };
+		DC846C88169F7C520074A10B /* NSDate+DecimalYear.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C87169F7C520074A10B /* NSDate+DecimalYear.m */; };
+		DC846C8F169F81590074A10B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2A169F66C10074A10B /* UIKit.framework */; };
+		DC846C90169F81590074A10B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2C169F66C10074A10B /* Foundation.framework */; };
+		DC846C91169F81590074A10B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C2E169F66C10074A10B /* CoreGraphics.framework */; };
+		DC846C97169F81590074A10B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC846C95169F81590074A10B /* InfoPlist.strings */; };
+		DC846C99169F81590074A10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C98169F81590074A10B /* main.m */; };
+		DC846C9F169F81590074A10B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC846C9E169F81590074A10B /* Default.png */; };
+		DC846CA1169F81590074A10B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC846CA0169F81590074A10B /* Default@2x.png */; };
+		DC846CA3169F81590074A10B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC846CA2169F81590074A10B /* Default-568h@2x.png */; };
+		DC846CA8169F816C0074A10B /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846CA7169F816C0074A10B /* GHUnitIOS.framework */; };
+		DC846CAA169F82210074A10B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846CA9169F82210074A10B /* QuartzCore.framework */; };
+		DC846CAB169F82880074A10B /* NSDate+DecimalYear.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C87169F7C520074A10B /* NSDate+DecimalYear.m */; };
+		DC846CAC169F82900074A10B /* GeomagnetismLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = DC846C50169F671B0074A10B /* GeomagnetismLibrary.c */; };
+		DC846CAD169F82970074A10B /* CCMagneticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846C56169F6E420074A10B /* CCMagneticModel.m */; };
+		DC846CAE169F82A90074A10B /* WMM.COF in Resources */ = {isa = PBXBuildFile; fileRef = DC846C51169F671B0074A10B /* WMM.COF */; };
+		DC846CB1169F839F0074A10B /* DeclinationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC846CB0169F839F0074A10B /* DeclinationTests.m */; };
+		DC846CB2169F85040074A10B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC846C83169F77250074A10B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC712F64169FD16C00D10872 /* CCMagneticDeclination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMagneticDeclination.h; sourceTree = "<group>"; };
+		DC712F65169FD16C00D10872 /* CCMagneticDeclination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMagneticDeclination.m; sourceTree = "<group>"; };
 		DC846C26169F66C10074A10B /* ObjectiveWMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveWMM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC846C2A169F66C10074A10B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC846C2C169F66C10074A10B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +62,26 @@
 		DC846C43169F66C10074A10B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DC846C45169F66C10074A10B /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
 		DC846C46169F66C10074A10B /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		DC846C4E169F671B0074A10B /* EGM9615.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGM9615.h; sourceTree = "<group>"; };
+		DC846C4F169F671B0074A10B /* GeomagnetismHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeomagnetismHeader.h; sourceTree = "<group>"; };
+		DC846C50169F671B0074A10B /* GeomagnetismLibrary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GeomagnetismLibrary.c; sourceTree = "<group>"; };
+		DC846C51169F671B0074A10B /* WMM.COF */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WMM.COF; sourceTree = "<group>"; };
+		DC846C55169F6E420074A10B /* CCMagneticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMagneticModel.h; sourceTree = "<group>"; };
+		DC846C56169F6E420074A10B /* CCMagneticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMagneticModel.m; sourceTree = "<group>"; };
+		DC846C83169F77250074A10B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC846C86169F7C520074A10B /* NSDate+DecimalYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DecimalYear.h"; sourceTree = "<group>"; };
+		DC846C87169F7C520074A10B /* NSDate+DecimalYear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DecimalYear.m"; sourceTree = "<group>"; };
+		DC846C8D169F81590074A10B /* ObjectiveWMMTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveWMMTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC846C94169F81590074A10B /* ObjectiveWMMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjectiveWMMTests-Info.plist"; sourceTree = "<group>"; };
+		DC846C96169F81590074A10B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC846C98169F81590074A10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC846C9A169F81590074A10B /* ObjectiveWMMTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveWMMTests-Prefix.pch"; sourceTree = "<group>"; };
+		DC846C9E169F81590074A10B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DC846CA0169F81590074A10B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DC846CA2169F81590074A10B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DC846CA7169F816C0074A10B /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ObjectiveWMM/GHUnitIOS.framework; sourceTree = "<group>"; };
+		DC846CA9169F82210074A10B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC846CB0169F839F0074A10B /* DeclinationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeclinationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +89,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC846C84169F77250074A10B /* CoreLocation.framework in Frameworks */,
 				DC846C2B169F66C10074A10B /* UIKit.framework in Frameworks */,
 				DC846C2D169F66C10074A10B /* Foundation.framework in Frameworks */,
 				DC846C2F169F66C10074A10B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC846C8A169F81590074A10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC846CB2169F85040074A10B /* CoreLocation.framework in Frameworks */,
+				DC846CAA169F82210074A10B /* QuartzCore.framework in Frameworks */,
+				DC846C8F169F81590074A10B /* UIKit.framework in Frameworks */,
+				DC846C90169F81590074A10B /* Foundation.framework in Frameworks */,
+				DC846C91169F81590074A10B /* CoreGraphics.framework in Frameworks */,
+				DC846CA8169F816C0074A10B /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				DC846C30169F66C10074A10B /* ObjectiveWMM */,
+				DC846C92169F81590074A10B /* ObjectiveWMMTests */,
 				DC846C29169F66C10074A10B /* Frameworks */,
 				DC846C27169F66C10074A10B /* Products */,
 			);
@@ -66,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				DC846C26169F66C10074A10B /* ObjectiveWMM.app */,
+				DC846C8D169F81590074A10B /* ObjectiveWMMTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +134,9 @@
 		DC846C29169F66C10074A10B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC846CA9169F82210074A10B /* QuartzCore.framework */,
+				DC846CA7169F816C0074A10B /* GHUnitIOS.framework */,
+				DC846C83169F77250074A10B /* CoreLocation.framework */,
 				DC846C2A169F66C10074A10B /* UIKit.framework */,
 				DC846C2C169F66C10074A10B /* Foundation.framework */,
 				DC846C2E169F66C10074A10B /* CoreGraphics.framework */,
@@ -85,10 +149,17 @@
 			children = (
 				DC846C39169F66C10074A10B /* CCAppDelegate.h */,
 				DC846C3A169F66C10074A10B /* CCAppDelegate.m */,
-				DC846C42169F66C10074A10B /* MainStoryboard.storyboard */,
+				DC712F64169FD16C00D10872 /* CCMagneticDeclination.h */,
+				DC712F65169FD16C00D10872 /* CCMagneticDeclination.m */,
+				DC846C55169F6E420074A10B /* CCMagneticModel.h */,
+				DC846C56169F6E420074A10B /* CCMagneticModel.m */,
 				DC846C45169F66C10074A10B /* CCViewController.h */,
 				DC846C46169F66C10074A10B /* CCViewController.m */,
+				DC846C42169F66C10074A10B /* MainStoryboard.storyboard */,
+				DC846C86169F7C520074A10B /* NSDate+DecimalYear.h */,
+				DC846C87169F7C520074A10B /* NSDate+DecimalYear.m */,
 				DC846C31169F66C10074A10B /* Supporting Files */,
+				DC846C4D169F671B0074A10B /* WMM */,
 			);
 			path = ObjectiveWMM;
 			sourceTree = "<group>";
@@ -103,6 +174,40 @@
 				DC846C3C169F66C10074A10B /* Default.png */,
 				DC846C3E169F66C10074A10B /* Default@2x.png */,
 				DC846C40169F66C10074A10B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC846C4D169F671B0074A10B /* WMM */ = {
+			isa = PBXGroup;
+			children = (
+				DC846C4E169F671B0074A10B /* EGM9615.h */,
+				DC846C4F169F671B0074A10B /* GeomagnetismHeader.h */,
+				DC846C50169F671B0074A10B /* GeomagnetismLibrary.c */,
+				DC846C51169F671B0074A10B /* WMM.COF */,
+			);
+			path = WMM;
+			sourceTree = "<group>";
+		};
+		DC846C92169F81590074A10B /* ObjectiveWMMTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC846C93169F81590074A10B /* Supporting Files */,
+				DC846CB0169F839F0074A10B /* DeclinationTests.m */,
+			);
+			path = ObjectiveWMMTests;
+			sourceTree = "<group>";
+		};
+		DC846C93169F81590074A10B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC846C94169F81590074A10B /* ObjectiveWMMTests-Info.plist */,
+				DC846C95169F81590074A10B /* InfoPlist.strings */,
+				DC846C98169F81590074A10B /* main.m */,
+				DC846C9A169F81590074A10B /* ObjectiveWMMTests-Prefix.pch */,
+				DC846C9E169F81590074A10B /* Default.png */,
+				DC846CA0169F81590074A10B /* Default@2x.png */,
+				DC846CA2169F81590074A10B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,6 +230,23 @@
 			name = ObjectiveWMM;
 			productName = ObjectiveWMM;
 			productReference = DC846C26169F66C10074A10B /* ObjectiveWMM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC846C8C169F81590074A10B /* ObjectiveWMMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC846CA4169F81590074A10B /* Build configuration list for PBXNativeTarget "ObjectiveWMMTests" */;
+			buildPhases = (
+				DC846C89169F81590074A10B /* Sources */,
+				DC846C8A169F81590074A10B /* Frameworks */,
+				DC846C8B169F81590074A10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectiveWMMTests;
+			productName = ObjectiveWMMTests;
+			productReference = DC846C8D169F81590074A10B /* ObjectiveWMMTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,6 +272,7 @@
 			projectRoot = "";
 			targets = (
 				DC846C25169F66C10074A10B /* ObjectiveWMM */,
+				DC846C8C169F81590074A10B /* ObjectiveWMMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +287,19 @@
 				DC846C3F169F66C10074A10B /* Default@2x.png in Resources */,
 				DC846C41169F66C10074A10B /* Default-568h@2x.png in Resources */,
 				DC846C44169F66C10074A10B /* MainStoryboard.storyboard in Resources */,
+				DC846C53169F671B0074A10B /* WMM.COF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC846C8B169F81590074A10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC846CAE169F82A90074A10B /* WMM.COF in Resources */,
+				DC846C97169F81590074A10B /* InfoPlist.strings in Resources */,
+				DC846C9F169F81590074A10B /* Default.png in Resources */,
+				DC846CA1169F81590074A10B /* Default@2x.png in Resources */,
+				DC846CA3169F81590074A10B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +313,23 @@
 				DC846C37169F66C10074A10B /* main.m in Sources */,
 				DC846C3B169F66C10074A10B /* CCAppDelegate.m in Sources */,
 				DC846C47169F66C10074A10B /* CCViewController.m in Sources */,
+				DC846C52169F671B0074A10B /* GeomagnetismLibrary.c in Sources */,
+				DC846C57169F6E420074A10B /* CCMagneticModel.m in Sources */,
+				DC846C88169F7C520074A10B /* NSDate+DecimalYear.m in Sources */,
+				DC712F66169FD16C00D10872 /* CCMagneticDeclination.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC846C89169F81590074A10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC846C99169F81590074A10B /* main.m in Sources */,
+				DC846CAB169F82880074A10B /* NSDate+DecimalYear.m in Sources */,
+				DC846CAC169F82900074A10B /* GeomagnetismLibrary.c in Sources */,
+				DC846CAD169F82970074A10B /* CCMagneticModel.m in Sources */,
+				DC846CB1169F839F0074A10B /* DeclinationTests.m in Sources */,
+				DC712F67169FD16C00D10872 /* CCMagneticDeclination.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +350,14 @@
 				DC846C43169F66C10074A10B /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		DC846C95169F81590074A10B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC846C96169F81590074A10B /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -274,6 +435,46 @@
 			};
 			name = Release;
 		};
+		DC846CA5169F81590074A10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ObjectiveWMM\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveWMMTests/ObjectiveWMMTests-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveWMMTests/ObjectiveWMMTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC846CA6169F81590074A10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ObjectiveWMM\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveWMMTests/ObjectiveWMMTests-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveWMMTests/ObjectiveWMMTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -293,6 +494,16 @@
 				DC846C4C169F66C10074A10B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC846CA4169F81590074A10B /* Build configuration list for PBXNativeTarget "ObjectiveWMMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC846CA5169F81590074A10B /* Debug */,
+				DC846CA6169F81590074A10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
