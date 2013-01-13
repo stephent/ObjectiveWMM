@@ -19,5 +19,6 @@
 - (BOOL) dateIsWithinModelBounds:(NSDate *) date;
 - (NSDate *) modelValidityStart;
 - (NSDate *) modelValidityEnd;
+- (NSDate *) dateWithinModelBoundsFromDate:(NSDate *)date;
 
 @end

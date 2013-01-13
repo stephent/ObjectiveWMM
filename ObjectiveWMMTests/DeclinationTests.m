@@ -282,6 +282,33 @@
     
 }
 
+- (void) testDateBounds01 {
+    
+    NSDate *date = [self dateForYear:2009 month:8 day:1];
+    
+    NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
+    
+    GHAssertTrue([withinBounds isEqualToDate:[[CCMagneticModel instance] modelValidityStart]], @"Unexpected date");
+}
+
+- (void) testDateBounds02 {
+    
+    NSDate *date = [self dateForYear:2017 month:3 day:21];
+    
+    NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
+    
+    GHAssertTrue([withinBounds isEqualToDate:[[CCMagneticModel instance] modelValidityEnd]], @"Unexpected date");
+}
+
+- (void) testDateBounds03 {
+    
+    NSDate *date = [self dateForYear:2013 month:6 day:21];
+    
+    NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
+    
+    GHAssertTrue([withinBounds isEqualToDate:date], @"Unexpected date");
+}
+
 #pragma mark - Helper methods
 
 - (NSDate *) dateForYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
