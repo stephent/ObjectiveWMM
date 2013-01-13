@@ -152,6 +152,19 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     return validTo;
 }
 
+- (NSDate *) dateWithinModelBoundsFromDate:(NSDate *)date {
+    
+    NSDate *modelStart = [self modelValidityStart];
+    if (date == [date earlierDate:modelStart])
+        return modelStart;
+    
+    NSDate *modelEnd = [self modelValidityEnd];
+    if (date == [date laterDate:modelEnd])
+        return modelEnd;
+    
+    return date;
+}
+
 #pragma mark - Private helper methods
 
 - (BOOL) decimalYearIsWithinModelBounds:(double)decimalYear {
