@@ -31,7 +31,7 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
 
 @interface CCMagneticModel()
 
-- (BOOL) decimalYearIsWithinModelBounds:(double)decimalYear;
+- (BOOL) decimalYearIsWithinModelBounds:(NSDecimalNumber *)decimalYear;
 - (NSDate *) dateForYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 
 @end
@@ -41,6 +41,8 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     MAGtype_MagneticModel * _magneticModels[1], * _timedMagneticModel;
     MAGtype_Ellipsoid _ellip;
     MAGtype_Geoid _geoid;
+    
+    NSDecimalNumberHandler *_decimalHandler;
 }
 
 + (CCMagneticModel *) instance {
@@ -82,6 +84,9 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
         _geoid.GeoidHeightBuffer = GeoidHeightBuffer;
         _geoid.Geoid_Initialized = 1;
         /* Set EGM96 Geoid parameters END */
+        
+        // get a decimal number handler to allow us to round down decimal year values when testing dates in model bounds
+        _decimalHandler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:0 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
     }
     
     return self;
@@ -109,8 +114,8 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     coordGeodetic.UseGeoid = 0;
     
     // date of interest
-    float decimalYear = [date decimalYear];
-    userDate.DecimalYear = decimalYear;
+    NSDecimalNumber *decimalYear = [date decimalYear];
+    userDate.DecimalYear = decimalYear.doubleValue;
     
     if (YES == [self decimalYearIsWithinModelBounds:decimalYear]) {
         // Convert from geodetic to Spherical Equations: 17-18, WMM Technical report
@@ -158,19 +163,22 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     if (date == [date earlierDate:modelStart])
         return modelStart;
     
-    NSDate *modelEnd = [self modelValidityEnd];
-    if (date == [date laterDate:modelEnd])
+    // one second before model expiry, so that the floor of modelEnd.decimal year equals preceding year
+    // (see decimalYearIsWithinModelBounds:)
+    NSDate *modelEnd = [[self modelValidityEnd] dateByAddingTimeInterval:-1];
+    if (date == [date laterDate:modelEnd]) {
         return modelEnd;
+    }
     
     return date;
 }
 
 #pragma mark - Private helper methods
 
-- (BOOL) decimalYearIsWithinModelBounds:(double)decimalYear {
+- (BOOL) decimalYearIsWithinModelBounds:(NSDecimalNumber *)decimalYear {
  
-    if(decimalYear > _magneticModels[0]->CoefficientFileEndDate || decimalYear < _magneticModels[0]->epoch)
-    {
+    double year = [decimalYear decimalNumberByRoundingAccordingToBehavior:_decimalHandler].doubleValue;
+    if(year > _magneticModels[0]->CoefficientFileEndDate || year < _magneticModels[0]->epoch) {
         return NO;
     }
 

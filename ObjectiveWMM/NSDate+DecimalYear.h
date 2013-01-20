@@ -10,6 +10,6 @@
 
 @interface NSDate (DecimalYear)
 
-- (double) decimalYear;
+- (NSDecimalNumber *) decimalYear;
 
 @end
