@@ -8,6 +8,10 @@
 
 #import "CCMagneticDeclination.h"
 
+static inline double withinZeroTo360(double degrees) {
+    return (degrees - (360.0 * floor(degrees/360.0)));
+}
+
 @interface CCMagneticDeclination()
 
 @property (readwrite, nonatomic) CLLocationCoordinate2D coordinate;
@@ -71,12 +75,12 @@
 
 - (CLLocationDirection) trueHeadingFromMagneticHeading:(CLLocationDirection)magneticHeading {
     
-    return magneticHeading + self.magneticDeclination;
+    return withinZeroTo360(magneticHeading + self.magneticDeclination);
 }
 
 - (CLLocationDirection) magneticHeadingFromTrueHeading:(CLLocationDirection)trueHeading {
     
-    return trueHeading - self.magneticDeclination;
+    return withinZeroTo360(trueHeading - self.magneticDeclination);
 }
 
 @end
