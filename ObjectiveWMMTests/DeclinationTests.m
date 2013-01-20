@@ -327,6 +327,38 @@
     GHAssertNotNil([[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630 date:dateInBounds], @"Declination was nil");
 }
 
+- (void) testHeadingInBounds01 {
+        
+    // New York on Jan 10 2013
+    
+	NSDate *date = [self dateForYear:2013 month:1 day:10];
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.714353, -74.005973);
+    
+    CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:57.0 date:date];
+    double heading = [declination trueHeadingFromMagneticHeading:0.0];
+    
+    GHTestLog(@"heading = %f", heading);
+    GHAssertTrue(0 < heading, @"heading was less than zero");
+    GHAssertTrue(heading < 360, @"heading was greater than 360");
+
+}
+
+- (void) testHeadingInBounds02 {
+    
+    // Boulder, Colorado on Jan 10 2013
+    
+	NSDate *date = [self dateForYear:2013 month:1 day:10];
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
+    
+    CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
+    double heading = [declination magneticHeadingFromTrueHeading:0.0];
+    
+    GHTestLog(@"heading = %f", heading);
+    GHAssertTrue(0 < heading, @"heading was less than zero");
+    GHAssertTrue(heading < 360, @"heading was greater than 360");
+    
+}
+
 #pragma mark - Helper methods
 
 - (NSDate *) dateForYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
