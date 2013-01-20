@@ -10,7 +10,7 @@
 
 @implementation NSDate (DecimalYear)
 
-- (double) decimalYear {
+- (NSDecimalNumber *) decimalYear {
     
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	
@@ -29,9 +29,15 @@
     [startOfNextYearComponents setYear:[dateComponents year] + 1];
     NSDate *startOfNextYear = [gregorian dateFromComponents:startOfNextYearComponents];
     
-    double decimalYear = [dateComponents year] + ([self timeIntervalSinceDate:startOfYear]/[startOfNextYear timeIntervalSinceDate:startOfYear]);
+    NSDecimalNumber *y = [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithInteger:[dateComponents year]] decimalValue]];
+    NSDecimalNumber *d1 = [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithFloat:[self timeIntervalSinceDate:startOfYear]] decimalValue]];
+    NSDecimalNumber *d2 = [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithFloat:[startOfNextYear timeIntervalSinceDate:startOfYear]] decimalValue]];
     
-    return decimalYear;
+    NSDecimalNumber *result = [y decimalNumberByAdding:[d1 decimalNumberByDividingBy:d2]];
+    
+    //double decimalYear = [dateComponents year] + (double) ([self timeIntervalSinceDate:startOfYear]/[startOfNextYear timeIntervalSinceDate:startOfYear]);
+    
+    return result;
 }
 
 @end
