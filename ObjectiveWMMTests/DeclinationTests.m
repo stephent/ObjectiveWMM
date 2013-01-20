@@ -297,7 +297,7 @@
     
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
-    GHAssertTrue([withinBounds isEqualToDate:[[CCMagneticModel instance] modelValidityEnd]], @"Unexpected date");
+    GHAssertEqualObjects(date, [withinBounds laterDate:date], @"Unexpected date");
 }
 
 - (void) testDateBounds03 {
@@ -307,6 +307,24 @@
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
     GHAssertTrue([withinBounds isEqualToDate:date], @"Unexpected date");
+}
+
+- (void) testDateWithinBounds01 {
+    
+    NSDate *inputDate = [self dateForYear:2017 month:1 day:1]; // out of range
+    
+    NSDate *dateInBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:inputDate];
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
+    GHAssertNotNil([[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630 date:dateInBounds], @"Declination was nil");
+}
+
+- (void) testDateWithinBounds02 {
+    
+    NSDate *inputDate = [self dateForYear:2010 month:1 day:1]; // out of range
+    
+    NSDate *dateInBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:inputDate];
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
+    GHAssertNotNil([[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630 date:dateInBounds], @"Declination was nil");
 }
 
 #pragma mark - Helper methods
