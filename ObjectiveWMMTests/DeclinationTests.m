@@ -297,7 +297,7 @@
     
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
-    GHAssertTrue([withinBounds isEqualToDate:[[CCMagneticModel instance] modelValidityEnd]], @"Unexpected date");
+    GHAssertEqualObjects(date, [withinBounds laterDate:date], @"Unexpected date");
 }
 
 - (void) testDateBounds03 {
