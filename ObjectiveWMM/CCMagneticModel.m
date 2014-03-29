@@ -98,6 +98,12 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     MAG_FreeMagneticModelMemory(_magneticModels[0]);
 }
 
++(CLLocationDirection) declinationForLocation:(CLLocation *) location {
+    CCMagneticModel *instance = [CCMagneticModel instance];
+    CCMagneticDeclination *declination = [instance declinationForCoordinate:location.coordinate elevation:location.altitude date:location.timestamp];
+    return declination.magneticDeclination;
+}
+
 - (CCMagneticDeclination *) declinationForCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date {
     
     MAGtype_CoordSpherical coordSpherical;

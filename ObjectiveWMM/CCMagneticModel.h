@@ -15,6 +15,7 @@
 
 + (CCMagneticModel *) instance;
 
++(CLLocationDirection) declinationForLocation:(CLLocation *) location;
 - (CCMagneticDeclination *) declinationForCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date;
 - (BOOL) dateIsWithinModelBounds:(NSDate *) date;
 - (NSDate *) modelValidityStart;
