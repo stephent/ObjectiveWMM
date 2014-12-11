@@ -2126,8 +2126,8 @@ int MAG_readMagneticModel_SHDF(char *filename, MAGtype_MagneticModel *(*magnetic
     char *line = (char *) malloc(MAXLINELENGTH);
     char *ptrreset;
     char paramvalue[MAXLINELENGTH];
-    int paramvaluelength = 0;
-    int paramkeylength = 0;
+    long paramvaluelength = 0;
+    long paramkeylength = 0;
     int i = 0, j = 0;
     int newrecord = 1;
     int header_index = -1;
@@ -2715,7 +2715,7 @@ int MAG_GetUTMParameters(double Latitude,
                 *CentralMeridian = (6 * temp_zone - 183) * M_PI / 180.0;
             else
                 *CentralMeridian = (6 * temp_zone + 177) * M_PI / 180.0;
-            *Zone = temp_zone;
+            *Zone = (int)temp_zone;
             if(Latitude < 0) *Hemisphere = 'S';
             else *Hemisphere = 'N';
         }
@@ -3933,7 +3933,8 @@ OUPUT  Pointer to data structure Geoid with the following elements updated
 CALLS : none
  */
 {
-    int ElevationsRead, SwabType, Index;
+    long ElevationsRead;
+    int SwabType, Index;
     FILE *GeoidHeightFile;
 
 
