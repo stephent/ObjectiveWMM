@@ -4,25 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ObjectiveWMM.xcscheme</key>
+		<key>meeus64.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>ObjectiveWMMTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DC846C25169F66C10074A10B</key>
+		<key>DC71D8D0197E067F00C665CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC846C8C169F81590074A10B</key>
+		<key>DC71D8DB197E067F00C665CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
