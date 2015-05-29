@@ -1,7 +1,7 @@
 ObjectiveWMM
 ============
 
-An Objective-C iOS wrapper for the World Magnetic Model 2010.
+An Objective-C iOS wrapper for the World Magnetic Model 2015.
 
 ObjectiveWMM is a simple repackaging for iOS of the C-language World Magnetic Model published by the United States’ National Geospatial-Intelligence Agency (NGA) and the United Kingdom’s Defence Geographic Centre (DGC).
 
@@ -33,7 +33,7 @@ The unit tests (built on [gh-unit](https://github.com/gabriel/gh-unit)) demonstr
 
 ## What's included
 
-ObjectiveWMM includes a copy of the required source files from the original WMM2010 Linux C-language distribution (available [here](http://www.ngdc.noaa.gov/geomag/WMM/soft.shtml)).
+ObjectiveWMM includes a copy of the required source files from the original WMM2015 Linux C-language distribution (available [here](http://www.ngdc.noaa.gov/geomag/WMM/soft.shtml)).
 
 Three additional classes are provided to provide a convenient interface for iOS Objective-C projects:
 
@@ -47,11 +47,11 @@ The ObjectiveWMM target in the project consists of an empty iOS application. Thi
 
 ## Test cases
 
-The project includes a number of unit tests that utilize the [WMM2010 Test Values](http://www.ngdc.noaa.gov/geomag/WMM/data/WMM2010/WMM2010testvalues.pdf) provided by the original model authors.
+The project includes a number of unit tests that utilize the [WMM2015 Test Values](http://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015testvalues.pdf) provided by the original model authors.
 
-In addition, a small number of test cases have been added, with test results taken from the DoD World Magnetic Model [Single Point Calculator](http://www.ngdc.noaa.gov/geomag-web/#igrfwmm) (2010 - 2015), configured to use WMM2010 (rather than IGRF 2011).
+In addition, a small number of test cases have been added, with test results taken from the DoD World Magnetic Model [Single Point Calculator](http://www.ngdc.noaa.gov/geomag-web/#igrfwmm) (2015 - 2020), configured to use WMM2015 (rather than IGRF 2011).
 
-Finally, tests are included to validate model boundary dates. WMM 2010 is intended for use with dates falling in the years 2010-2015 only.
+Finally, tests are included to validate model boundary dates. WMM 2015 is intended for use with dates falling in the years 2015-2020 only.
 
 ## Modifications to WMM source
 
