@@ -24,6 +24,7 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
     
     NSString *fn = [NSString stringWithCString:fileName encoding:NSUTF8StringEncoding];
     NSString *fe = [NSString stringWithCString:fileExtension encoding:NSUTF8StringEncoding];
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:fn ofType:fe];
     
     return [path cStringUsingEncoding:NSUTF8StringEncoding];
@@ -63,7 +64,10 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
         int epochs = 1;
         int numTerms, nMax = 0;
         
-        char *filename = (char *) getPathForResource("WMM", "COF");
+        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.crookneckconsulting.ObjectiveWMM"];
+        NSString *path = [bundle pathForResource:@"WMM" ofType:@"COF"];
+        
+        char *filename = (char *) [path cStringUsingEncoding:NSUTF8StringEncoding];
         
         MAG_robustReadMagModels(filename, &_magneticModels, epochs);
         
@@ -197,7 +201,7 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
 	[comps setDay:day];
 	[comps setMonth:month];
 	[comps setYear:year];
-	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDate *date = [gregorian dateFromComponents:comps];
     
     return date;

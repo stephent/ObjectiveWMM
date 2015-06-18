@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC709FCC1A3FDB2E0055DCDE /* CCMagneticDeclination.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FB11A3FDB2E0055DCDE /* CCMagneticDeclination.h */; };
+		DC37B8661B3375E70041F93C /* ObjectiveWMM.h in Headers */ = {isa = PBXBuildFile; fileRef = DC70A01A1A400ED50055DCDE /* ObjectiveWMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC709FCC1A3FDB2E0055DCDE /* CCMagneticDeclination.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FB11A3FDB2E0055DCDE /* CCMagneticDeclination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC709FCD1A3FDB2E0055DCDE /* CCMagneticDeclination.m in Sources */ = {isa = PBXBuildFile; fileRef = DC709FB21A3FDB2E0055DCDE /* CCMagneticDeclination.m */; };
-		DC709FCE1A3FDB2E0055DCDE /* CCMagneticModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FB31A3FDB2E0055DCDE /* CCMagneticModel.h */; };
+		DC709FCE1A3FDB2E0055DCDE /* CCMagneticModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FB31A3FDB2E0055DCDE /* CCMagneticModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC709FCF1A3FDB2E0055DCDE /* CCMagneticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC709FB41A3FDB2E0055DCDE /* CCMagneticModel.m */; };
 		DC709FD91A3FDB2F0055DCDE /* NSDate+DecimalYear.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FC01A3FDB2E0055DCDE /* NSDate+DecimalYear.h */; };
 		DC709FDA1A3FDB2F0055DCDE /* NSDate+DecimalYear.m in Sources */ = {isa = PBXBuildFile; fileRef = DC709FC11A3FDB2E0055DCDE /* NSDate+DecimalYear.m */; };
@@ -17,9 +18,9 @@
 		DC709FDE1A3FDB2F0055DCDE /* GeomagnetismHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = DC709FC61A3FDB2E0055DCDE /* GeomagnetismHeader.h */; };
 		DC709FDF1A3FDB2F0055DCDE /* GeomagnetismLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = DC709FC71A3FDB2E0055DCDE /* GeomagnetismLibrary.c */; };
 		DC709FE01A3FDB2F0055DCDE /* PUBLIC_DOMAIN in Resources */ = {isa = PBXBuildFile; fileRef = DC709FC81A3FDB2E0055DCDE /* PUBLIC_DOMAIN */; };
-		DC709FE11A3FDB2F0055DCDE /* WMM.COF in Resources */ = {isa = PBXBuildFile; fileRef = DC709FC91A3FDB2E0055DCDE /* WMM.COF */; };
 		DC709FE41A3FDC440055DCDE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC709FE31A3FDC440055DCDE /* CoreLocation.framework */; };
 		DC709FEB1A3FDDE30055DCDE /* DeclinationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC709FEA1A3FDDE30055DCDE /* DeclinationTests.m */; };
+		DC709FEF1A3FE4A00055DCDE /* WMM.COF in Resources */ = {isa = PBXBuildFile; fileRef = DC709FEE1A3FE4A00055DCDE /* WMM.COF */; };
 		DC71D8DD197E067F00C665CB /* ObjectiveWMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC71D8D1197E067F00C665CB /* ObjectiveWMM.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,11 +45,12 @@
 		DC709FC61A3FDB2E0055DCDE /* GeomagnetismHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeomagnetismHeader.h; sourceTree = "<group>"; };
 		DC709FC71A3FDB2E0055DCDE /* GeomagnetismLibrary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GeomagnetismLibrary.c; sourceTree = "<group>"; };
 		DC709FC81A3FDB2E0055DCDE /* PUBLIC_DOMAIN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PUBLIC_DOMAIN; sourceTree = "<group>"; };
-		DC709FC91A3FDB2E0055DCDE /* WMM.COF */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WMM.COF; sourceTree = "<group>"; };
 		DC709FE31A3FDC440055DCDE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DC709FE61A3FDD5E0055DCDE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ObjectiveWMMTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		DC709FE81A3FDD690055DCDE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC709FEA1A3FDDE30055DCDE /* DeclinationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeclinationTests.m; path = ObjectiveWMMTests/DeclinationTests.m; sourceTree = SOURCE_ROOT; };
+		DC709FEE1A3FE4A00055DCDE /* WMM.COF */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WMM.COF; sourceTree = "<group>"; };
+		DC70A01A1A400ED50055DCDE /* ObjectiveWMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveWMM.h; sourceTree = "<group>"; };
 		DC71D8D1197E067F00C665CB /* ObjectiveWMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveWMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC71D8DC197E067F00C665CB /* ObjectiveWMMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveWMMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,9 +84,11 @@
 				DC709FB41A3FDB2E0055DCDE /* CCMagneticModel.m */,
 				DC709FC01A3FDB2E0055DCDE /* NSDate+DecimalYear.h */,
 				DC709FC11A3FDB2E0055DCDE /* NSDate+DecimalYear.m */,
-				DC709FE21A3FDB9E0055DCDE /* Supporting Files */,
+				DC70A01A1A400ED50055DCDE /* ObjectiveWMM.h */,
 				DC709FE51A3FDC840055DCDE /* Frameworks */,
+				DC709FE21A3FDB9E0055DCDE /* Supporting Files */,
 				DC709FC41A3FDB2E0055DCDE /* WMM */,
+				DC709FEE1A3FE4A00055DCDE /* WMM.COF */,
 			);
 			path = ObjectiveWMM;
 			sourceTree = "<group>";
@@ -96,7 +100,6 @@
 				DC709FC61A3FDB2E0055DCDE /* GeomagnetismHeader.h */,
 				DC709FC71A3FDB2E0055DCDE /* GeomagnetismLibrary.c */,
 				DC709FC81A3FDB2E0055DCDE /* PUBLIC_DOMAIN */,
-				DC709FC91A3FDB2E0055DCDE /* WMM.COF */,
 			);
 			path = WMM;
 			sourceTree = "<group>";
@@ -160,11 +163,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC37B8661B3375E70041F93C /* ObjectiveWMM.h in Headers */,
+				DC709FCC1A3FDB2E0055DCDE /* CCMagneticDeclination.h in Headers */,
+				DC709FCE1A3FDB2E0055DCDE /* CCMagneticModel.h in Headers */,
 				DC709FDE1A3FDB2F0055DCDE /* GeomagnetismHeader.h in Headers */,
 				DC709FDD1A3FDB2F0055DCDE /* EGM9615.h in Headers */,
 				DC709FD91A3FDB2F0055DCDE /* NSDate+DecimalYear.h in Headers */,
-				DC709FCC1A3FDB2E0055DCDE /* CCMagneticDeclination.h in Headers */,
-				DC709FCE1A3FDB2E0055DCDE /* CCMagneticModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC709FEF1A3FE4A00055DCDE /* WMM.COF in Resources */,
 				DC709FE01A3FDB2F0055DCDE /* PUBLIC_DOMAIN in Resources */,
-				DC709FE11A3FDB2F0055DCDE /* WMM.COF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -367,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,9 +396,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectiveWMM/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = ObjectiveWMM;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -404,8 +409,8 @@
 		DC71D8E9197E067F00C665CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -416,9 +421,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectiveWMM/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = ObjectiveWMM;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
