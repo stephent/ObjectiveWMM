@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-
-#import "CCMagneticModel.h"
-#import "CCMagneticDeclination.h"
+#import <ObjectiveWMM/ObjectiveWMM.h>
 
 @interface DeclinationTests : XCTestCase
 
