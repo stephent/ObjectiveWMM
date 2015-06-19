@@ -12,10 +12,10 @@
 
 - (NSDecimalNumber *) decimalYear {
     
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	
-    NSDateComponents *dateComponents = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit
-                                                              | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    NSDateComponents *dateComponents = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour
+                                                              | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:self];
 	
     NSDateComponents *startOfYearComponents =  [[NSDateComponents alloc] init];
     [startOfYearComponents setDay:1];
