@@ -18,29 +18,38 @@ static inline double withinZeroTo360(double degrees) {
 @property (readwrite, nonatomic) CLLocationDistance elevation;
 @property (readwrite, nonatomic, strong) NSDate *date;
 @property (readwrite, nonatomic) CLLocationDirection magneticDeclination;
+@property (readwrite, nonatomic) double fieldStrength;
 
 @end
 
 @implementation CCMagneticDeclination
 
-- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date magneticDeclination:(CLLocationDirection)magneticDeclination {
+- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date magneticDeclination:(CLLocationDirection)magneticDeclination  fieldStrength:(double)fieldStrength {
     
     self = [super init];
     if (self) {
-        self.coordinate = coordinate;
-        self.elevation = elevation;
-        self.date = date;
-        self.magneticDeclination = magneticDeclination;
+        _coordinate = coordinate;
+        _elevation = elevation;
+        _date = date;
+        _magneticDeclination = magneticDeclination;
+        _fieldStrength = fieldStrength;
     }
     
     return self;
+}
+
+- (NSString *) description {
+    
+    NSString *desc = [NSString stringWithFormat:@"%1.3f°,%1.3f° / %1.2fm at %@: decl: %1.2f° F: %1.2fμT", self.coordinate.latitude, self.coordinate.longitude, self.elevation, self.date.description, self.magneticDeclination, self.fieldStrength];
+    
+    return desc;
 }
 
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
     
-    CCMagneticDeclination *magneticDeclination = [[CCMagneticDeclination allocWithZone:zone] initWithCoordinate:self.coordinate elevation:self.elevation date:self.date magneticDeclination:self.magneticDeclination];
+    CCMagneticDeclination *magneticDeclination = [[CCMagneticDeclination allocWithZone:zone] initWithCoordinate:self.coordinate elevation:self.elevation date:self.date magneticDeclination:self.magneticDeclination fieldStrength:self.fieldStrength];
     
     return magneticDeclination;
 }
@@ -53,8 +62,9 @@ static inline double withinZeroTo360(double degrees) {
     CLLocationDistance elevation = [aDecoder decodeDoubleForKey:@"elevation"];
     NSDate *date = [aDecoder decodeObjectForKey:@"date"];
     CLLocationDirection magneticDeclination = [aDecoder decodeDoubleForKey:@"magneticDeclination"];
+    double fieldStrength = [aDecoder decodeDoubleForKey:@"fieldStrength"];
     
-    self = [self initWithCoordinate:coord elevation:elevation date:date magneticDeclination:magneticDeclination];
+    self = [self initWithCoordinate:coord elevation:elevation date:date magneticDeclination:magneticDeclination fieldStrength:fieldStrength];
     if (!self) {
         return nil;
     }
@@ -69,6 +79,7 @@ static inline double withinZeroTo360(double degrees) {
     [aCoder encodeDouble:self.elevation forKey:@"elevation"];
     [aCoder encodeObject:self.date forKey:@"date"];
     [aCoder encodeDouble:self.magneticDeclination forKey:@"magneticDeclination"];
+    [aCoder encodeDouble:self.fieldStrength forKey:@"fieldStrength"];
 }
 
 #pragma mark - Public
