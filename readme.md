@@ -5,7 +5,7 @@ An Objective-C iOS wrapper for the World Magnetic Model 2015.
 
 ObjectiveWMM is a simple repackaging for iOS of the C-language World Magnetic Model published by the United States’ National Geospatial-Intelligence Agency (NGA) and the United Kingdom’s Defence Geographic Centre (DGC).
 
-WMM is primarily useful to be able to determine the magnetic declination for a given location on a given date. As the earth's magnetic field changes over time, the model provides a way to obtain a predicated value for magnetic declination.
+WMM is primarily useful to be able to determine the magnetic declination for a given location on a given date. As the earth's magnetic field changes over time, the model provides a way to obtain a predicted value for magnetic declination.
 
 Magnetic declination is required in order to convert between headings relative to true north and magnetic north. The difference can be significant in certain parts of the world.
 
