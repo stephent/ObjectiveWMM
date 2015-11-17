@@ -29,7 +29,7 @@ In order to obtain, for example, a magnetic heading from a heading relative to t
 * Choose the ObjectiveWMM Target and an iOS Simulator
 * Run the selected target and execute the unit tests
 
-The project is configured as a Dynamic Framework targeting iOS 8.0. The unit tests (using XCTest) demonstrate how to use the classes in the project.
+The project is configured as a Dynamic Framework targeting iOS 8.1. The unit tests (using XCTest) demonstrate how to use the classes in the project.
 
 ## What's included
 
