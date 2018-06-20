@@ -1660,19 +1660,19 @@ CALLS : none
     if(!LegendreFunction)
     {
         MAG_Error(1);
-        return FALSE;
+        return (MAGtype_LegendreFunction *) FALSE;
     }
     LegendreFunction->Pcup = (double *) malloc((NumTerms + 1) * sizeof ( double));
     if(LegendreFunction->Pcup == 0)
     {
         MAG_Error(1);
-        return FALSE;
+        return (MAGtype_LegendreFunction *) FALSE;
     }
     LegendreFunction->dPcup = (double *) malloc((NumTerms + 1) * sizeof ( double));
     if(LegendreFunction->dPcup == 0)
     {
         MAG_Error(1);
-        return FALSE;
+        return (MAGtype_LegendreFunction *) FALSE;
     }
     return LegendreFunction;
 } /*MAGtype_LegendreFunction*/
