@@ -421,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = mh_dylib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.crookneckconsulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ObjectiveWMM;
 				PROVISIONING_PROFILE = "";
@@ -443,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = mh_dylib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.crookneckconsulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ObjectiveWMM;
 				PROVISIONING_PROFILE = "";
