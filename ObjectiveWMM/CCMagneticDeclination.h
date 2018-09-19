@@ -11,12 +11,13 @@
 
 @interface CCMagneticDeclination : NSObject <NSCopying, NSCoding>
 
-- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date magneticDeclination:(CLLocationDirection)magneticDeclination;
+- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate elevation:(CLLocationDistance)elevation date:(NSDate *)date magneticDeclination:(CLLocationDirection)magneticDeclination fieldStrength:(double)fieldStrength;
 
 @property (readonly, nonatomic) CLLocationCoordinate2D coordinate;
 @property (readonly, nonatomic) CLLocationDistance elevation;
 @property (readonly, nonatomic, strong) NSDate *date;
 @property (readonly, nonatomic) CLLocationDirection magneticDeclination;
+@property (readonly, nonatomic) double fieldStrength; // in μT
 
 - (CLLocationDirection) trueHeadingFromMagneticHeading:(CLLocationDirection)magneticHeading;
 - (CLLocationDirection) magneticHeadingFromTrueHeading:(CLLocationDirection)trueHeading;

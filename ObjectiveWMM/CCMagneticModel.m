@@ -136,7 +136,7 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
         
         MAG_CalculateGridVariation(coordGeodetic, &geoMagneticElements);
         
-        CCMagneticDeclination *result = [[CCMagneticDeclination alloc] initWithCoordinate:coordinate elevation:elevation date:date magneticDeclination:geoMagneticElements.Decl];
+        CCMagneticDeclination *result = [[CCMagneticDeclination alloc] initWithCoordinate:coordinate elevation:elevation date:date magneticDeclination:geoMagneticElements.Decl fieldStrength:geoMagneticElements.F/1000.0];
         
         return result;
     }

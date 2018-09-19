@@ -1,6 +1,12 @@
 # Xcode
 #
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
 build/
+DerivedData/
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -9,10 +15,19 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
-*.xccheckout
+xcuserdata/*
+*.xcuserdatad
+
+## Other
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+## SJT - do we need this still, given above lines?
+# *.xcuserstate
+
+## Cocoapods
+Pods
+
+## Subversion
+.svn
