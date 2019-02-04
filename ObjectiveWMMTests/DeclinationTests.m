@@ -68,7 +68,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.85, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.90, 0.005, @"Unexpected declination");
     
 }
 
@@ -80,7 +80,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.57, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.55, 0.005, @"Unexpected declination");
     
 }
 
@@ -104,7 +104,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -4.27, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -4.32, 0.005, @"Unexpected declination");
     
 }
 
@@ -116,7 +116,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.56, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.54, 0.005, @"Unexpected declination");
     
 }
 
@@ -140,7 +140,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -2.75, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -2.59, 0.005, @"Unexpected declination");
     
 }
 
@@ -152,7 +152,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.32, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.37, 0.005, @"Unexpected declination");
     
 }
 
@@ -164,7 +164,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.58, 0.006, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.59, 0.006, @"Unexpected declination");
     
 }
 
@@ -176,7 +176,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.17, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.01, 0.005, @"Unexpected declination");
     
 }
 
@@ -188,7 +188,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.32, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.36, 0.005, @"Unexpected declination");
     
 }
 
@@ -200,11 +200,12 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.00, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.01, 0.005, @"Unexpected declination");
     
 }
 
 // Subsequent test values obtained from http://www.ngdc.noaa.gov/geomag-web/#igrfwmm with model set to WMM2015
+// 4 Feb 2019: expected results updated from http://www.ngdc.noaa.gov/geomag-web/#igrfwmm - although not stated, this online calculator appears to have been updated to use WMM2015v2 COF
 
 - (void) testDeclination13 {
     
@@ -216,7 +217,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 8.3790, 0.001, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 8.4116, 0.001, @"Unexpected declination");
     
 }
 
@@ -230,7 +231,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:22.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.19978, 0.002, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.0432, 0.002, @"Unexpected declination");
     
 }
 
@@ -244,7 +245,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:54.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 12.60236, 0.003, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 12.5805, 0.003, @"Unexpected declination");
 }
 
 - (void) testInvalidDate01 {
@@ -286,7 +287,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy([declination trueHeadingFromMagneticHeading:94.0], 94.0 + 8.37904, 0.001, @"Unexpected true heading");
+    XCTAssertEqualWithAccuracy([declination trueHeadingFromMagneticHeading:94.0], 94.0 + 8.4116, 0.001, @"Unexpected true heading");
     
 }
 
@@ -300,7 +301,7 @@
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy([declination magneticHeadingFromTrueHeading:94.0 + 8.37904], 94.0, 0.001, @"Unexpected magnetic heading");
+    XCTAssertEqualWithAccuracy([declination magneticHeadingFromTrueHeading:94.0 + 8.4116], 94.0, 0.001, @"Unexpected magnetic heading");
     
 }
 
