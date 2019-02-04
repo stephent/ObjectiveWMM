@@ -1710,7 +1710,7 @@ CALLS : none
     if(MagneticModel == NULL)
     {
         MAG_Error(2);
-        return FALSE;
+        return (MAGtype_MagneticModel *) FALSE;
     }
 
     MagneticModel->Main_Field_Coeff_G = (double *) malloc((NumTerms + 1) * sizeof ( double));
@@ -1718,7 +1718,7 @@ CALLS : none
     if(MagneticModel->Main_Field_Coeff_G == NULL)
     {
         MAG_Error(2);
-        return FALSE;
+        return (MAGtype_MagneticModel *) FALSE;
     }
 
     MagneticModel->Main_Field_Coeff_H = (double *) malloc((NumTerms + 1) * sizeof ( double));
@@ -1726,19 +1726,19 @@ CALLS : none
     if(MagneticModel->Main_Field_Coeff_H == NULL)
     {
         MAG_Error(2);
-        return FALSE;
+        return (MAGtype_MagneticModel *) FALSE;
     }
     MagneticModel->Secular_Var_Coeff_G = (double *) malloc((NumTerms + 1) * sizeof ( double));
     if(MagneticModel->Secular_Var_Coeff_G == NULL)
     {
         MAG_Error(2);
-        return FALSE;
+        return (MAGtype_MagneticModel *) FALSE;
     }
     MagneticModel->Secular_Var_Coeff_H = (double *) malloc((NumTerms + 1) * sizeof ( double));
     if(MagneticModel->Secular_Var_Coeff_H == NULL)
     {
         MAG_Error(2);
-        return FALSE;
+        return (MAGtype_MagneticModel *) FALSE;
     }
     MagneticModel->CoefficientFileEndDate = 0;
     MagneticModel->EditionDate = 0;
