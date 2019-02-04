@@ -1,7 +1,7 @@
 ObjectiveWMM
 ============
 
-An Objective-C iOS wrapper for the World Magnetic Model 2015.
+An Objective-C iOS wrapper for the [World Magnetic Model 2015v2](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml).
 
 ObjectiveWMM is a simple repackaging for iOS of the C-language World Magnetic Model published by the United States’ National Geospatial-Intelligence Agency (NGA) and the United Kingdom’s Defence Geographic Centre (DGC).
 
@@ -51,7 +51,7 @@ The project includes a number of unit tests that utilize the [WMM2015 Test Value
 
 In addition, a small number of test cases have been added, with test results taken from the DoD World Magnetic Model [Single Point Calculator](http://www.ngdc.noaa.gov/geomag-web/#igrfwmm) (2015 - 2020), configured to use WMM2015 (rather than IGRF 2011).
 
-Finally, tests are included to validate model boundary dates. WMM 2015 is intended for use with dates falling in the years 2015-2020 only.
+Finally, tests are included to validate model boundary dates. WMM 2015v2 is intended for use with dates falling in the years 2015-2020 only.
 
 ## Modifications to WMM source
 
@@ -80,7 +80,7 @@ ObjectiveWMM by [stephentrainor](https://github.com/stephent/).
 
 ## License
 
-ObjectiveWMM includes portions of the WMM source code distributed by NGDC.
+ObjectiveWMM includes portions of the WMM source code distributed by NCEI.
 
 The WMM source code is in the public domain and not licensed or under copyright. The information and software may be used freely by the public. As required by 17 U.S.C. 403, third parties producing copyrighted works consisting predominantly of the material produced by U.S. government agencies must provide notice with such work(s) identifying the U.S. Government material incorporated and stating that such material is not subject to copyright protection.
 
