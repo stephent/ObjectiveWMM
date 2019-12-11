@@ -11,7 +11,7 @@
  *
  * ABSTRACT
  *
- * The purpose of Geomagnetism Library is primarily to support the World Magnetic Model (WMM) 2015-2020.
+ * The purpose of Geomagnetism Library is primarily to support the World Magnetic Model (WMM) 2020-2025.
  * It however is built to be used for spherical harmonic models of the Earth's magnetic field
  * generally and supports models even with a large (>>12) number of degrees.  It is also used in many 
  * other geomagnetic models distributed by NGDC.
@@ -732,7 +732,7 @@ char MAG_GeomagIntroduction_EMM(MAGtype_MagneticModel *MagneticModel, char* Vers
             printf("\n The Enhanced Magnetic Model (EMM) for %d", (int) MagneticModel->epoch);
             printf("\n is a model of Earth's main Magnetic and crustal field.  The EMM");
             printf("\n is recomputed every five (5) years, in years divisible by ");
-            printf("\n five (i.e. 2010, 2015).  See the contact information below");
+            printf("\n five (i.e. 2015, 2020).  See the contact information below");
             printf("\n to obtain more information on the EMM and associated software.");
             printf("\n ");
             printf("\n Input required is the location in geodetic latitude and");
@@ -808,7 +808,7 @@ char MAG_GeomagIntroduction_WMM(MAGtype_MagneticModel *MagneticModel, char *Vers
             printf("\n The World Magnetic Model (WMM) for %d", (int) MagneticModel->epoch);
             printf("\n is a model of Earth's main Magnetic field.  The WMM");
             printf("\n is recomputed every five (5) years, in years divisible by ");
-            printf("\n five (i.e. 2010, 2015).  See the contact information below");
+            printf("\n five (i.e. 2015, 2020).  See the contact information below");
             printf("\n to obtain more information on the WMM and associated software.");
             printf("\n ");
             printf("\n Input required is the location in geodetic latitude and");
