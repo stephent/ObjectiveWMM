@@ -49,210 +49,209 @@
 
 - (void) testModelValidityPeriod {
     
-    // Current model is valid from 2015 through 2020 (see http://www.ngdc.noaa.gov/geomag/WMM/soft.shtml)
+    // Current model is valid from 2020 through 2025 (see https://www.ngdc.noaa.gov/geomag/WMM/soft.shtml)
     
-    NSDate *validFrom = [self dateForYear:2015 month:1 day:1];
-    NSDate *validTo = [self dateForYear:2020 month:12 day:31];
+    NSDate *validFrom = [self dateForYear:2020 month:1 day:1];
+    NSDate *validTo = [self dateForYear:2025 month:12 day:31];
     
     XCTAssertTrue([validFrom isEqualToDate:[[CCMagneticModel instance] modelValidityStart]], @"Unexpected model validity start date");
     XCTAssertTrue([validTo isEqualToDate:[[CCMagneticModel instance] modelValidityEnd]], @"Unexpected model validity end date");
 }
 
-// See http://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015testvalues.pdf for tests 01 through 12
+// See https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020testvalues.pdf for tests 01 through 12
 
 - (void) testDeclination01 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(80, 0);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.90, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -1.28, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination02 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0, 120);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.55, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.16, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination03 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-80, 240);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.81, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.36, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination04 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(80, 0);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -4.32, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -1.70, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination05 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0, 120);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.54, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.16, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination06 {
     
-    NSDate *date = [self dateForYear:2015 month:1 day:1];
+    NSDate *date = [self dateForYear:2020 month:1 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-80, 240);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.22, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 68.78, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination07 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(80, 0);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -2.59, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.01, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination08 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0, 120);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.37, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.06, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination09 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-80, 240);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.59, 0.006, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.13, 0.006, @"Unexpected declination");
     
 }
 
 - (void) testDeclination10 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(80, 0);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -3.01, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.41, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination11 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0, 120);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.36, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.05, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination12 {
     
-    NSDate *date = [self dateForYear:2017 month:7 day:1];
+    NSDate *date = [self dateForYear:2022 month:7 day:1];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-80, 240);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:100000 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 69.01, 0.005, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 68.55, 0.005, @"Unexpected declination");
     
 }
 
-// Subsequent test values obtained from http://www.ngdc.noaa.gov/geomag-web/#igrfwmm with model set to WMM2015
-// 4 Feb 2019: expected results updated from http://www.ngdc.noaa.gov/geomag-web/#igrfwmm - although not stated, this online calculator appears to have been updated to use WMM2015v2 COF
+// Subsequent test values obtained from WMMGUI: https://www.ngdc.noaa.gov/geomag/WMM/soft.shtml
 
 - (void) testDeclination13 {
     
-    // Boulder, Colorado on Jan 10 2018
+    // Boulder, Colorado on Jan 10 2023
     
-    NSDate *date = [self dateForYear:2018 month:1 day:10];
+    NSDate *date = [self dateForYear:2023 month:1 day:10];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 8.4116, 0.001, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 7.93, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination14 {
     
-    // London, UK on Aug 28 2019
+    // London, UK on Aug 28 2024
     
-    NSDate *date = [self dateForYear:2019 month:8 day:28];
+    NSDate *date = [self dateForYear:2024 month:8 day:28];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(51.507335, -0.127683);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:22.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, -0.0432, 0.002, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 0.95, 0.005, @"Unexpected declination");
     
 }
 
 - (void) testDeclination15 {
     
-    // Sydney, Australia on Dec 31 2014
+    // Sydney, Australia on Dec 31 2020
     
-    NSDate *date = [self dateForYear:2019 month:12 day:31];
+    NSDate *date = [self dateForYear:2020 month:12 day:31];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-33.867487, 151.206990);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:54.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 12.5805, 0.003, @"Unexpected declination");
+    XCTAssertEqualWithAccuracy(declination.magneticDeclination, 12.68, 0.005, @"Unexpected declination");
 }
 
 - (void) testInvalidDate01 {
     
-    // Sydney, Australia on Jan 1 2021 - date is out of model bounds, declination returned should equal zero
+    // Sydney, Australia on Jan 1 2026 - date is out of model bounds, declination returned should equal zero
     
-    NSDate *date = [self dateForYear:2021 month:1 day:1];
+    NSDate *date = [self dateForYear:2026 month:1 day:1];
     
     XCTAssertFalse([[CCMagneticModel instance] dateIsWithinModelBounds:date], @"Expected date to be out of model bounds");
     
@@ -265,9 +264,9 @@
 
 - (void) testInvalidDate02 {
     
-    // Sydney, Australia on Dec 31 2014 - date is out of model bounds, declination returned should equal zero
+    // Sydney, Australia on Dec 31 2019 - date is out of model bounds, declination returned should equal zero
     
-    NSDate *date = [self dateForYear:2014 month:12 day:31];
+    NSDate *date = [self dateForYear:2019 month:12 day:31];
     
     XCTAssertFalse([[CCMagneticModel instance] dateIsWithinModelBounds:date], @"Expected date to be out of model bounds");
     
@@ -279,35 +278,35 @@
 
 - (void) testTrueHeading01 {
     
-    // Boulder, Colorado on Jan 10 2018
+    // Boulder, Colorado on Jan 10 2023
     
-    NSDate *date = [self dateForYear:2018 month:1 day:10];
+    NSDate *date = [self dateForYear:2023 month:1 day:10];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy([declination trueHeadingFromMagneticHeading:94.0], 94.0 + 8.4116, 0.001, @"Unexpected true heading");
+    XCTAssertEqualWithAccuracy([declination trueHeadingFromMagneticHeading:94.0], 94.0 + 7.93, 0.005, @"Unexpected true heading");
     
 }
 
 - (void) testMagneticHeading01 {
     
-    // Boulder, Colorado on Jan 10 2018
+    // Boulder, Colorado on Jan 10 2023
     
-    NSDate *date = [self dateForYear:2018 month:1 day:10];
+    NSDate *date = [self dateForYear:2023 month:1 day:10];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
     
     NSLog(@"declination = %f", declination.magneticDeclination);
-    XCTAssertEqualWithAccuracy([declination magneticHeadingFromTrueHeading:94.0 + 8.4116], 94.0, 0.001, @"Unexpected magnetic heading");
+    XCTAssertEqualWithAccuracy([declination magneticHeadingFromTrueHeading:94.0 + 7.93], 94.0, 0.005, @"Unexpected magnetic heading");
     
 }
 
 - (void) testDateBounds01 {
     
-    NSDate *date = [self dateForYear:2014 month:8 day:1];
+    NSDate *date = [self dateForYear:2019 month:8 day:1];
     
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
@@ -316,7 +315,7 @@
 
 - (void) testDateBounds02 {
     
-    NSDate *date = [self dateForYear:2022 month:3 day:21];
+    NSDate *date = [self dateForYear:2027 month:3 day:21];
     
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
@@ -326,7 +325,7 @@
 
 - (void) testDateBounds03 {
     
-    NSDate *date = [self dateForYear:2018 month:6 day:21];
+    NSDate *date = [self dateForYear:2021 month:6 day:21];
     
     NSDate *withinBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:date];
     
@@ -335,7 +334,7 @@
 
 - (void) testDateWithinBounds01 {
     
-    NSDate *inputDate = [self dateForYear:2022 month:1 day:1]; // out of range
+    NSDate *inputDate = [self dateForYear:2027 month:1 day:1]; // out of range
     
     NSDate *dateInBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:inputDate];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
@@ -344,7 +343,7 @@
 
 - (void) testDateWithinBounds02 {
     
-    NSDate *inputDate = [self dateForYear:2015 month:1 day:1]; // out of range
+    NSDate *inputDate = [self dateForYear:2019 month:1 day:1]; // out of range
     
     NSDate *dateInBounds = [[CCMagneticModel instance] dateWithinModelBoundsFromDate:inputDate];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
@@ -353,9 +352,9 @@
 
 - (void) testHeadingInBounds01 {
     
-    // New York on Jan 10 2018
+    // New York on Jan 10 2023
     
-    NSDate *date = [self dateForYear:2018 month:1 day:10];
+    NSDate *date = [self dateForYear:2023 month:1 day:10];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.714353, -74.005973);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:57.0 date:date];
@@ -369,9 +368,9 @@
 
 - (void) testHeadingInBounds02 {
     
-    // Boulder, Colorado on Jan 10 2018
+    // Boulder, Colorado on Jan 10 2023
     
-    NSDate *date = [self dateForYear:2018 month:1 day:10];
+    NSDate *date = [self dateForYear:2023 month:1 day:10];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(40.014986, -105.270546);
     
     CCMagneticDeclination *declination = [[CCMagneticModel instance] declinationForCoordinate:coord elevation:1630.0 date:date];
