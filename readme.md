@@ -1,7 +1,7 @@
 ObjectiveWMM
 ============
 
-An Objective-C iOS wrapper for the [World Magnetic Model 2015v2](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml).
+An Objective-C iOS wrapper for the [World Magnetic Model 2020](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml).
 
 ObjectiveWMM is a simple repackaging for iOS of the C-language World Magnetic Model published by the United States’ National Geospatial-Intelligence Agency (NGA) and the United Kingdom’s Defence Geographic Centre (DGC).
 
@@ -47,11 +47,11 @@ The ObjectiveWMM target in the project consists of an empty iOS application. Thi
 
 ## Test cases
 
-The project includes a number of unit tests that utilize the [WMM2015 Test Values](http://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015testvalues.pdf) provided by the original model authors.
+The project includes a number of unit tests that utilize the [WMM2020 Test Values](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020testvalues.pdf) provided by the original model authors.
 
-In addition, a small number of test cases have been added, with test results taken from the DoD World Magnetic Model [Single Point Calculator](http://www.ngdc.noaa.gov/geomag-web/#igrfwmm) (2015 - 2020), configured to use WMM2015 (rather than IGRF 2011).
+In addition, a small number of test cases have been added, with test results taken from the DoD World Magnetic Model [Single Point Calculator](http://www.ngdc.noaa.gov/geomag-web/#igrfwmm) (2020 - 2025), configured to use  WMM (2019-2024).
 
-Finally, tests are included to validate model boundary dates. WMM 2015v2 is intended for use with dates falling in the years 2015-2020 only.
+Finally, tests are included to validate model boundary dates. WMM 2020 is intended for use with dates falling in the years 2020-2025 only.
 
 ## Modifications to WMM source
 
