@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-#import "CCMagneticDeclination.h"
+#import <ObjectiveWMM/CCMagneticDeclination.h>
 
 @interface CCMagneticModel : NSObject
 
