@@ -64,10 +64,7 @@ const char * getPathForResource(const char *fileName, const char *fileExtension)
         int epochs = 1;
         int numTerms, nMax = 0;
         
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.crookneckconsulting.ObjectiveWMM"];
-        NSString *path = [bundle pathForResource:@"WMM" ofType:@"COF"];
-        
-        char *filename = (char *) [path cStringUsingEncoding:NSUTF8StringEncoding];
+        char *filename = (char *) getPathForResource("WMM", "COF");
         
         MAG_robustReadMagModels(filename, &_magneticModels, epochs);
         
